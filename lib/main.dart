@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:mac_doc/dock/dock.dart';
 
 void main() {
+  /// Starting point of our Mac Dock application.
   runApp(const MyApp());
 }
 
@@ -10,11 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    // Used GetX for efficient state management.
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.deepPurple[100],
-        body: const Center(
+        body: Center(
+          // Dynamic list of Dock items.
           child: Dock(
             items: [
               Icons.person,
