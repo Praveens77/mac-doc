@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         body: Center(
           // Dynamic list of Dock items.
           child: Dock(
-            items: const [
+            items: [
               Icons.person,
               Icons.message,
               Icons.call,
